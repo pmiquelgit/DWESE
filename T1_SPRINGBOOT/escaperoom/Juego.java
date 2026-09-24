@@ -133,32 +133,42 @@ public class Juego {
         }
 
     }
-
+    //////////////////////////////////////////////////////////////////
     /*
     Ejercicio 1.1: añade a la clase Juego un método restarPuntos(int puntos), 
     simétrico a agregarPuntos(): debe validar que puntos sea positivo, 
     restarlo de puntuacion (sin dejarla bajar de 0) e imprimir un mensaje 
     similar al de agregarPuntos().    
     */
+    //////////////////////////////////////////////////////////////////
     public void restarPuntos(int puntos) {
 
+        // Primero verifico que los puntos sean positivos
         if (puntos > 0) {
 
-            this.puntuacion = this.puntuacion - puntos;
+            // Si los puntos son positivos, 
+            // entonces verifico que no se 
+            // intente restar más de lo que hay
 
-            if (this.puntuacion < 0) {
+            // Si es el caso, entonces no se puede, tira para atrás
+            if (puntos > this.puntuacion) {
 
-                System.out.println("La puntuación no puede ser negativa!");
-                
+                System.out.println("No puedes restar más puntos de los que hay! Se restarán los que se puedan.");
+                this.puntuacion = 0;
+
+            // Si no es el caso, adelante, resta los puntos
             } else {
 
-                System.out.println("-" + puntos + "puntos. Total: " + this.puntuacion);
+
+                this.puntuacion -= puntos;
+                System.out.println("-" + puntos + " puntos. Total: " + this.puntuacion);
 
             }
+
+        // Si los puntos no son positivos, entonces olvida absolutamente todo
         } else {
 
-            System.out.println("No puedes restar un numero negativo de puntos!");
-
+            System.out.println("Error, la puntuación tiene que ser positiva!");
         }
 
     }

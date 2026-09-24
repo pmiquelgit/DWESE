@@ -1,12 +1,11 @@
 package escaperoom;
 
 public class Puzzle {
-     // Contador estático para asignar IDs únicos
 
+     // Contador estático para asignar IDs únicos
     private static int contadorId = 0;
 
     // Atributos de instancia
-
     private final int id;  // final porque no cambia después de crearse
 
     private String nombre;
@@ -23,9 +22,7 @@ public class Puzzle {
 
     private int intentos;
 
-    public Puzzle(String nombre, String descripcion, String solucion,
-
-                  int puntos, String pista) {
+    public Puzzle(String nombre, String descripcion, String solucion, int puntos, String pista) {
 
         this.id = ++contadorId;
 
@@ -111,7 +108,7 @@ public class Puzzle {
 
     }
 
-
+    //////////////////////////////////////////////////////////////////
     /*
     Ejercicio 1.2: añade un método estático getTotalPuzzlesCreados() 
     que devuelva el valor actual de contadorId (el mismo atributo 
@@ -119,8 +116,10 @@ public class Puzzle {
     un miembro static se puede consultar sin necesidad de tener 
     un objeto Puzzle concreto.
     */
-    public static Puzzle getTotalPuzzlesCreados() {
+   //////////////////////////////////////////////////////////////////
+    public static int getTotalPuzzlesCreados() {
 
+        return contadorId;
     }
 
 
