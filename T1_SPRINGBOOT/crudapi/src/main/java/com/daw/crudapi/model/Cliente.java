@@ -13,6 +13,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -20,7 +21,8 @@ import lombok.ToString;
 @Getter 
 @Setter 
 @ToString
-@AllArgsConstructor 
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(indexes = @Index(name = "idx_email", columnList = "nombre"))
 
 public class Cliente {
