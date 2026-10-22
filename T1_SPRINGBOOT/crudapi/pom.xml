@@ -59,6 +59,12 @@
 			<artifactId>spring-boot-starter-webservices-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    <groupId>net.datafaker</groupId>
+    <artifactId>datafaker</artifactId>
+    <version>2.7.0</version>
+</dependency>
+
 	</dependencies>
 
 	<build>

@@ -20,7 +20,7 @@ public class CrudApiController {
 @GetMapping
 public String index() {
 
-    Cliente cliente = new Cliente(1L, "Pedro", "Jimenez", "pepe@gmail.com", "564356464", null, null)
+    Cliente cliente = new Cliente(1L, "Pedro", "Jimenez", "pepe@gmail.com", "564356464", null, null);
 
     // Guardamos el cliente en BBDD con save
     // Esto hace un insert en BBDD
@@ -30,7 +30,7 @@ public String index() {
 
     // Si modificamos los datos del cliente y hacemos save otra vez
     // En este caso hace un update ya que la entity esta mapeada en BBDD
-    
+
     clienteGuardado.setApellidos("Gonzalez Savedra");
 
     repoCli.save(clienteGuardado);
